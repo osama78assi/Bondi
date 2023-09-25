@@ -1,0 +1,310 @@
+:root {
+  --section-color-1: #19283f;
+  --section-color-2: #eff7fa;
+  --color-1: #ff3150;
+  --color-1-1: #fb1739;
+  --color-2: #33d1cc;
+  --color-3: #ffc400;
+}
+body {
+  font-family: "Roboto", sans-serif !important;
+}
+.btn-bondi {
+  background-color: var(--color-1);
+  color: var(--color-3);
+}
+.btn-bondi:hover {
+  background-color: var(--color-1-1);
+  color: var(--color-3) !important;
+}
+.btn-outline-bondi {
+  border-color: var(--color-1);
+  color: var(--color-1);
+}
+.btn-outline-bondi:hover,
+.btn-outline-bondi:active,
+.btn-outline-bondi:focus,
+.btn-outline-bondi-active {
+  box-shadow: none;
+  background-color: var(--color-1-1);
+  color: var(--color-3);
+}
+.text-black-25 {
+  color: rgba(0, 0, 0, 0.25);
+}
+.text-blue {
+  color: var(--color-2) !important;
+}
+.text-golden {
+  color: var(--color-3) !important;
+}
+/* Header */
+.navbar {
+  background-color: var(--section-color-1);
+}
+.navbar .navbar-toggler {
+  color: #fff;
+  border: 1px solid #fff;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-nav {
+  position: relative !important;
+}
+.navbar .column-icon {
+  display: inline-block;
+  width: 2px;
+  height: 25px;
+  margin: 0px 20px;
+  background-color: var(--color-2);
+}
+.navbar .nav-link {
+  color: #ddd !important;
+}
+.navbar .active,
+.navbar .nav-link:focus,
+.navbar .nav-link:hover {
+  color: var(--color-2) !important;
+}
+.navbar .icon {
+  margin: 0px 20px;
+  font-size: 1.5rem;
+  color: var(--color-2);
+}
+/* Landing */
+.landing {
+  min-height: calc(100vh - 72px);
+  background-color: var(--section-color-1);
+}
+.landing .title {
+  font-size: 50px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.landing .desc {
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+@media (width <= 500px) {
+  .landing .title {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+}
+/* Services */
+.intro .atom {
+  display: block;
+  margin: 20px auto;
+  font-size: 60px !important;
+  color: var(--color-3) !important;
+}
+.intro .sheet {
+  font-size: 13px !important;
+  letter-spacing: 1px;
+}
+.intro hr {
+  width: 100px;
+  border: none;
+  outline: none;
+  background-color: var(--color-2);
+  opacity: 1;
+}
+.services .icon {
+  font-size: 50px;
+  color: var(--color-2);
+}
+.services .row div {
+  padding-top: 6rem;
+  counter-increment: num;
+}
+.services .row {
+  color: var(--color-3);
+}
+.services .row div::after {
+  content: counter(num);
+  position: absolute;
+  z-index: -1;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 150px;
+  color: rgba(228, 228, 228, 0.5);
+}
+.services .row p {
+  font-size: 13px;
+}
+/* Portfolio */
+.portfolio {
+  background-color: var(--section-color-2);
+}
+.portfolio .col-12::before {
+  content: "Awesome Work";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 1.5rem);
+  height: calc(100% - 1rem);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  background-color: rgba(51, 209, 204, 0.5);
+  color: #fff;
+  transition-duration: 0.3s;
+  opacity: 0;
+}
+.portfolio .col-12::after {
+  content: "/Design";
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000;
+  transition-duration: 0.3s;
+  opacity: 0;
+}
+.portfolio .col-12:hover::before,
+.portfolio .col-12:hover::after {
+  opacity: 1;
+}
+/* About */
+.desc-about {
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+@media (width <= 768px) {
+  .desc-about {
+    width: 75% !important;
+  }
+}
+/* Testimonials */
+.testimonials {
+  background-color: var(--section-color-2);
+}
+.testimonials .team h1 {
+  color: var(--color-3);
+}
+.testimonials .person {
+  background-color: #fff;
+  border: 0.5rem solid var(--section-color-2);
+  border-bottom: none;
+}
+.testimonials .person::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 35%;
+  z-index: 3;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  padding: 1rem 0;
+  color: #fff;
+  background-color: rgba(51, 209, 204, 0.8);
+}
+.testimonials .person:nth-child(1)::before {
+  content: "Luke Skywallker";
+}
+.testimonials .person:nth-child(2)::before {
+  content: "Obi-Wan Kenobi";
+}
+.testimonials .person:nth-child(3)::before {
+  content: "Princess Leia";
+}
+.testimonials .person:nth-child(4)::before {
+  content: "Yoda";
+}
+.testimonials .person img {
+  height: 65%;
+}
+.testimonials .person p {
+  height: 35%;
+  font-size: 14px !important;
+}
+@media (width <= 768px) {
+  .about .part-two .person p {
+    height: 35%;
+    font-size: 16px !important;
+  }
+  .about .logos .col-6 img {
+    width: 75px;
+    height: 50px;
+  }
+}
+/* Projects */
+.create-project {
+  background-color: var(--section-color-1);
+}
+/* Blog */
+.blog .row .col-12 span {
+  font-size: 13px !important;
+}
+.blog .row p {
+  color: var(--section-color-1) !important;
+}
+.blog .subscribe {
+  background-color: var(--color-3);
+}
+.blog .subscribe input {
+  background-color: transparent;
+  color: #fff !important;
+  border: none !important;
+  border-bottom: #fff solid 1px !important;
+}
+.blog .subscribe input::placeholder {
+  color: #fff !important;
+  font-size: 13px;
+}
+.blog .subscribe input:focus {
+  box-shadow: none !important;
+  border: none !important;
+  border-bottom: #fff solid 1px !important;
+}
+.blog .subscribe .btn {
+  color: var(--color-3) !important;
+  background-color: var(--section-color-1) !important;
+}
+@media (width <= 768px) {
+  .blog .row .col-12 {
+    height: fit-content;
+    padding: 2rem 0;
+  }
+  .blog .subscribe .col-12 {
+    padding: 0.5rem 15px !important;
+  }
+  .blog .subscribe p {
+    text-align: center !important;
+  }
+}
+/* Footer */
+.footer {
+  background-color: var(--section-color-1);
+}
+.footer .links .nav-link:not(:first-child) {
+  font-size: 12px !important;
+}
+.footer .row .col-12:last-child p {
+  line-height: 2;
+}
+.footer .row .col-12:last-child .btn {
+  color: #fff;
+  background-color: var(--color-1);
+  font-size: 13px;
+  font-weight: 300;
+}
+.footer .row .col-12:last-child .btn:hover,
+.footer .row .col-12:last-child .btn:active,
+.footer .row .col-12:last-child .btn:focus,
+.footer .row .col-12:last-child .btn-active {
+  background-color: var(--color-1-1);
+}
+.footer .icons {
+  gap: 10px;
+}
+.footer .icons span {
+  width: 25px;
+  height: 25px;
+}
